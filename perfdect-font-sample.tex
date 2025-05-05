@@ -65,17 +65,17 @@
     \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeSubheading}[5]{
+\newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
       \textbf{#1} & #2 \\
-      \textbf{\textit{\small\color{rolecolor}#3}} \small{\textmd{[#4]}} & \textbf{\textit{\small #5}} \\
+      \textbf{\textit{\small\color{rolecolor}#3}} & \textbf{\textit{\small #4}} \\
     \end{tabular*}\vspace{-5pt}
 }
 
-\newcommand{\resumeSubSubheading}[3]{
+\newcommand{\resumeSubSubheading}[2]{
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{\textit{\small\color{rolecolor}#1}} \small{\textmd{[#2]}} & \textbf{\textit{\small #3}} \\
+      \textbf{\textit{\small\color{rolecolor}#1}} & \textbf{\textit{\small #2}} \\
     \end{tabular*}\vspace{-5pt}
 }
 
@@ -106,7 +106,7 @@
   \resumeSubHeadingListStart
     \resumeSubheading
       {International Institute of Information Technology (IIIT-H)}{Hyderabad, India}
-      {Bachelor of Technology in Computer Science and Engineering}{Computer Science}{2015 -- 2019}
+      {Bachelor of Technology in Computer Science and Engineering}{2015 -- 2019}
   \resumeSubHeadingListEnd
 
 
@@ -116,40 +116,37 @@
 
     \resumeSubheading
       {Plivo Communications Private Limited.}{Bangalore, India (Remote)}
-      {Senior Software Engineer}{Python, FastAPI, Flask, GoLang, Echo}{Jan 2023 -- Dec 2024}
+      {Senior Software Engineer}{Jan 2023 -- Dec 2024}
       \resumeItemListStart
         \resumeItem{Reporting Infrastructure}
-          {Explored multiple solutions for user-facing reporting by running POCs with ClickHouse and Explo, identifying limitations and performance gaps. Implemented \underline{DBT} (Data Build Tool) for scalable, low-latency data transformation, \underline{reducing query time from 8 seconds to a max of 100ms}.}
-        \resumeItem{System Re-Architecture \& Improvements}{
+          {Explored multiple solutions for user-facing reporting by running POCs with ClickHouse and Explo, identifying limitations and performance gaps. Implemented \underline{DBT} for scalable, low-latency data transformation, \underline{reducing query time from 8 seconds to a max of 100ms}.}
+        \resumeItem{System Reliability \& Performance}{
           \begin{itemize}[label=$\circ$]
-            \item Identified and mitigated a major idempotency issue in Celery when used with Redis, where a bug caused messages to be duplicated indefinitely. Revamped and implemented a robust workaround within strict deadlines that \underline{limited duplication to a controlled maximum of six, and idempotent execution} with zero release downtime, significantly improving system efficiency.
+            \item Identified and mitigated a major idempotency issue in Celery when used with Redis, where a bug caused messages to be duplicated indefinitely. Revamped and Implemented a robust workaround within strict deadlines that \underline{limited duplication to a controlled maximum of six, and idempotent execution}.
             \item Optimized job execution in a distributed worker system by introducing a concurrent temporary execution registry on the fly to prevent duplicate job processing and generalized it with an added observability mechanism for real-time tracking.
             \item Led AWS optimizations, segregating not so CPU or Memory Intensive to a new cluster with a smaller ECR image, resulting in improved system performance and \underline{reduced costs by 10\%}.
-            \item Resolved a critical SQS network issue that affects the reliability of the background job. Implemented a solution using the \underline{transactional outbox pattern to ensure 100\% message persistence}. Led release planning to ensure zero downtime for existing messages, with a phased rollout.
             \item Set up traceability and alerting systems using prometheus, opentelemtry and sentry, reducing the Mean Time To Detection (MTTD) for incidents by 30\%.
           \end{itemize}
         }
         \resumeItem{Team Leadership}
-          {Managed and mentored a team of five engineers, delegating tasks, breaking down major deliverables into subtasks, and parallelizing efforts to meet deadlines for support and feature requests.}
-        \resumeItem{Internal Tooling and Operational Efficiency} 
-        {Identified pain points in debugging workflows and product operations. Introduced and integrated Supabase as an internal tooling layer to expose key system functionalities, enabling faster issue resolution and improving efficiency for product ops and GTM teams. Also introduced an AI-based PR review system to enhance developer productivity for security issues.}}
+          {Managed and mentored a team of five engineers, delegating tasks, breaking down major deliverables into subtasks, and parallelizing efforts to meet deadlines for support and feature requests. Also introduced an AI-based PR review system to enhance developer productivity for security issues.}
       \resumeItemListEnd
 
     \resumeSubSubheading
-      {Software Engineer - 2}{Python, Django, Flask, GoLang}{Jul 2021 -- Jan 2023}
+      {Software Engineer - 2}{Jul 2021 -- Jan 2023}
       \resumeItemListStart
         \resumeItem{Salesforce Integration}
           {Led the end-to-end Salesforce integration—from ideation, research, and design to implementation—delivering reliable bidirectional sync with custom intervals and achieving near real-time data consistency.}
         \resumeItem{Product Integration}
           {Integrated the acquired platform Decanext (email sequence automation) into Sellular, extending it with SMTP/IMAP support, variable handling, and scheduling—seamlessly connecting it to the in-house CDP (Customer Data Platform) layer.}
-        \resumeItem{Team Growth and Onboarding}
-          {Contributed to hiring efforts and helped scale the team from 4 to 24 engineers. Designed onboarding processes and provided early mentorship to streamline ramp-up and team integration.}
+        \resumeItem{Performance Optimization}
+          {Resolved a critical SQS network issue affecting background message reliability. Implemented a solution using the \underline{transactional outbox pattern to ensure 100\% message persistence}. Led release planning to ensure zero downtime for existing messages, with a phased rollout.}
         \resumeItem{Reliability and Compliance}
-          {Improved system reliability by resolving critical production issues within SLA and addressing third-party integration issues. Also implemented security fixes to support SOC2 and GDPR compliance, along with Google yearly security assessment.}
+          {Improved system reliability by resolving critical production issues within SLA and addressing third-party integration issues. Also implemented security fixes to support SOC2 and GDPR compliance.}
       \resumeItemListEnd
 
     \resumeSubSubheading
-      {Software Engineer - 1}{Python, Django, Flask, VueJS, ReactJS}{Jun 2019 -- May 2021}
+      {Software Engineer - 1}{Jun 2019 -- May 2021}
       \resumeItemListStart
         \resumeItem{PHLO Features}
           {Delivered core PHLO (Plivo's visual flow builder for call and SMS APIs) features—such as header redirection and multiparty calls—streamlining customer onboarding.}
@@ -158,7 +155,7 @@
       \resumeItemListEnd
 
     \resumeSubSubheading
-      {Software Engineering Intern}{Python, Selenium, Robot Framework}{May 2018 -- Jul 2018}
+      {Software Engineering Intern}{May 2018 -- Jul 2018}
       \resumeItemListStart
         \resumeItem{Automation Framework}
           {Designed and implemented a UI automation framework to streamline sanity and smoke testing, enhancing deployment quality and earning a full-time offer based on outstanding impact.}
